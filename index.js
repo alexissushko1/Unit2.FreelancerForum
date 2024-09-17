@@ -42,5 +42,26 @@ const freelancers = [
   {name: "Mr. Hanks", occupaton: "Camera Operator", price: 60},
 ]
 
+function pickFreelancer() {
 const name = [Math.floor(Math.random() * names.length)];
-const occupation = [Math.floor(Math.random() * 25)]
+const occupation = [Math.floor(Math.random() * (70 - 30) + 30)];
+
+freelancers.push({name, occupation, price});
+}
+
+function renderFreelancers() {
+  const $freelancers = freelancers.map((freelancer) =>
+  {const $freelancer = document.createElement("ul");
+
+  const $nameTd = document.getElementById("li")
+  $nameTd.textContent = freelancer.name;
+
+  const $occupationTd = document.getElementById("li")
+  $nameTd.textContent = freelancer.occupation;
+
+  const $priceTd = document.getElementById("li")
+  $nameTd.textContent = freelancer.price;
+debugger;
+  $freelancers.replaceChildren(...[$nameTd], [$occupationTd], [$priceTd]);
+});
+}return $ul;
